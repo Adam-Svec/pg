@@ -16,6 +16,6 @@ def sudy_lichy(cislo):
     else: 
         print("liche")
 
-sudy_lichy(3)
+sudy_lichy(5)
 
-sudy_lichy(4)
+sudy_lichy(1000000)
