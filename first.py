@@ -6,6 +6,8 @@ def sudy_nebo_lichy(cislo):
     else: 
         print("liche")
 
+
 sudy_nebo_lichy(5)
 
 sudy_nebo_lichy(1000000)
+
