@@ -15,3 +15,4 @@ if __name__ =="__main__":
         sys.exit(1)
     soubor = sys.argv[1]
     main(soubor)
+    

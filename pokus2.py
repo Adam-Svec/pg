@@ -30,6 +30,6 @@ if __name__ == "__main__":
         "jmeno": "Matěj",
         "prijmeni": "Dvořák",
         "vek": 21,
-        "znamky": [1, 2, 1, 1, 3, 2]
+        "znamky": [1, 2, 1, 1, 3]
     }
     print(naformatuj_text(student))
