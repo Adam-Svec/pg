@@ -1,5 +1,3 @@
-
-#úkol 1
 def sudy_nebo_lichy(cislo):
 
     if cislo % 2 == 0:
