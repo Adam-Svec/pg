@@ -23,7 +23,7 @@ def get_prime_numbers(maximum):
     print(list_of_primes)
 
 
-if is_prime(insert):
+if  is_prime(insert):
     print("True")
 else:
     print("False")
