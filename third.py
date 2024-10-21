@@ -16,7 +16,7 @@ def je_prvocislo(cislo):
 
 def vrat_prvocisla(maximum):
     seznam = []
-    for i in range(1, maximum + 1):
+    for i in range(2, maximum + 1):
         if je_prvocislo(i):
             seznam.append(i)
  

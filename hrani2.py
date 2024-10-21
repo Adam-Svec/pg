@@ -1,26 +1,33 @@
-def je_prvocislo(cislo):
-   
-    if cislo < 2:
+insert = int(input("Enter a number: "))
+insert2 = int(input("Enter the upper limit: "))
+
+def is_prime(number):
+    divisor = 2
+    while divisor < number:
+        if number % divisor == 0:
+            break
+        divisor = divisor + 1
+
+    if divisor == number:
+        return True
+    else:
         return False
-    for i in range(2, int(cislo**0.5) + 1):
-        if cislo % i == 0:
-            return False
-    return True
 
-def vrat_prvocisla(maximum):
-    seznam = []
-    for i in range(2, maximum + 1):  # Pro každé číslo od 2 do maximum (včetně)
-        if je_prvocislo(i):  # Pokud je číslo prvočíslo
-            seznam.append(2,)  # Přidáme ho do seznamu
-    return seznam
 
-if __name__ == "__main__":
-    # Požádáme uživatele o zadání čísla
-    try:
-        cislo = int(input("Zadejte číslo: "))  # Přečteme číslo z terminálu
-        if je_prvocislo(cislo):
-            print(f"Číslo {cislo} je prvočíslo.")
-        else:
-            print(f"Číslo {cislo} není prvočíslo.")
-    except ValueError:
-        print("Zadejte platné číslo.")
+def get_prime_numbers(maximum):
+    list_of_primes = []
+    for i in range(2, maximum + 1):
+        if is_prime(i):
+            list_of_primes.append(i)
+ 
+    print(list_of_primes)
+
+
+if is_prime(insert):
+    print("True")
+else:
+    print("False")
+
+
+is_prime(insert)
+get_prime_numbers(insert2)
