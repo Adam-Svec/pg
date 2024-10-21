@@ -28,7 +28,6 @@ def cislo_text(cislo):
 
     return "Neplatné číslo"
 
-
 if __name__ == "__main__":
     cislo = input("Zadej číslo: ")
     text = cislo_text(cislo)
