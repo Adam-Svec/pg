@@ -1,33 +1,33 @@
-vloz = int(input("Zadej cislo: "))
-vloz2 = int(input("Zadej konecne cislo: "))
+insert = int(input("Enter a number: "))
+insert2 = int(input("Enter an ending number: "))
 
-def je_prvocislo(cislo):
-    delitel = 2
-    while delitel < cislo:
-        if cislo % delitel == 0:
+def is_prime(number):
+    divisor = 2
+    while divisor < number:
+        if number % divisor == 0:
             break
-        delitel = delitel + 1
+        divisor += 1
 
-    if delitel == cislo:
+    if divisor == number:
         return True
     else:
         return False
 
 
-def vrat_prvocisla(maximum):
-    seznam = []
+def return_primes(maximum):
+    list_of_primes = []
     for i in range(2, maximum + 1):
-        if je_prvocislo(i):
-            seznam.append(i)
+        if is_prime(i):
+            list_of_primes.append(i)
  
-    print(seznam)
+    print(list_of_primes)
 
 
-if je_prvocislo(vloz):
+if is_prime(insert):
     print("True")
 else:
     print("False")
 
 
-je_prvocislo(vloz)
-vrat_prvocisla(vloz2)
+is_prime(insert)
+return_primes(insert2)
