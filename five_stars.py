@@ -26,7 +26,7 @@ def in_range(min_number, max_number, number):
     else:
         print("is not in rage")
 
-#in_range(100, 1000, 2000)
+in_range(100, 1000, 2000)
 
 
 #funkce vypise string "Ahoj jmeno"

@@ -1,33 +1,24 @@
-insert = int(input("Enter a number: "))
-insert2 = int(input("Enter an ending number: "))
-
-def is_prime(number):
-    divisor = 2
-    while divisor < number:
-        if number % divisor == 0:
+def je_prvocislo(cislo):
+    delitel = 2
+    while delitel < cislo:
+        if cislo % delitel == 0:
             break
-        divisor += 1
+        delitel = delitel + 1
 
-    if divisor == number:
+    if delitel == cislo:
         return True
     else:
         return False
 
 
-def return_primes(maximum):
-    list_of_primes = []
-    for i in range(2, maximum + 1):
-        if is_prime(i):
-            list_of_primes.append(i)
+def vrat_prvocisla(maximum):
+    seznam = []
+    for i in range(1, maximum + 1):
+        if je_prvocislo(i):
+            seznam.append(i)
  
-    print(list_of_primes)
+    return(seznam)
 
 
-if is_prime(insert):
-    print("True")
-else:
-    print("False")
-
-
-is_prime(insert)
-return_primes(insert2)
+print(je_prvocislo(5))
+print(vrat_prvocisla(10))

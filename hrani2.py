@@ -1,33 +1,27 @@
-insert = int(input("Enter a number: "))
-insert2 = int(input("Enter the upper limit: "))
-
-def is_prime(number):
-    divisor = 2
-    while divisor < number:
-        if number % divisor == 0:
-            break
-        divisor = divisor + 1
-
-    if divisor == number:
-        return True
+def levensteinova_vzdalenost(dotaz1, dotaz2):
+   
+    if len(dotaz1) == 0:
+        return len(dotaz2)
+    elif len(dotaz2) == 0:
+        return len(dotaz1)
     else:
-        return False
+   
+        if dotaz1[-1] == dotaz2[-1]:
+            return levensteinova_vzdalenost(dotaz1[:-1], dotaz2[:-1])
+        else:
+           
+            return 1 + min(
+                levensteinova_vzdalenost(dotaz1, dotaz2[:-1]),  
+                levensteinova_vzdalenost(dotaz1[:-1], dotaz2),  
+                levensteinova_vzdalenost(dotaz1[:-1], dotaz2[:-1]))  
 
 
-def get_prime_numbers(maximum):
-    list_of_primes = []
-    for i in range(2, maximum + 1):
-        if is_prime(i):
-            list_of_primes.append(i)
- 
-    print(list_of_primes)
+if __name__ == "__main__":
 
+    query1 = "seznam"
+    query2 = "seznamka"
+    query3 = "sesnam"
 
-if  is_prime(insert):
-    print("True")
-else:
-    print("False")
-
-
-is_prime(insert)
-get_prime_numbers(insert2)
+    print(levensteinova_vzdalenost(query1, query2))
+    print(levensteinova_vzdalenost(query2, query3))
+    print(levensteinova_vzdalenost(query1, query3))
