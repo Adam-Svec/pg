@@ -20,5 +20,5 @@ def vrat_prvocisla(maximum):
     return(seznam)
 
 
-print(je_prvocislo(5))
+print(je_prvocislo(3))
 print(vrat_prvocisla(10))
