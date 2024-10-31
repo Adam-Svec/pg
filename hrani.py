@@ -1,20 +1,24 @@
-def jaccardova_vzdalenost_mnozin(mnozina1, mnozina2):
-    set1 = set(mnozina1)
-    set2 = set(mnozina2)
+import csv
 
-    prunik = set1.intersection(set2)
-    sjednoceni = set1.union(set2)
+def nacti_csv(soubor):
+    pass
 
-    jaccarduv_index = len(prunik) / len(sjednoceni)
-    jaccardova_vzdalenost = 1 - jaccarduv_index
 
-    return jaccardova_vzdalenost
+def spoj_data(*data):
+    pass
+
+
+def zapis_csv(soubor, data):
+    pass
+
 
 if __name__ == "__main__":
-    serp1 = ["https://www.seznam.cz", "https://www.google.com", "https://www.jcu.cz", "https://www.czu.cz", "https://www.cvut.cz", "https://www.uk.cz"]
-    serp2 = ["https://www.seznam.cz", "https://www.google.com", "https://www.novinky.cz", "https://www.idnes.cz", "https://www.zpravy.cz", "https://www.tn.cz"]
-    serp3 = ["https://www.jcu.cz", "https://www.czu.cz", "https://www.cvut.cz", "https://www.uk.cz"]
-
-    print(jaccardova_vzdalenost_mnozin(serp1, serp2))
-    print(jaccardova_vzdalenost_mnozin(serp2, serp3))
-    print(jaccardova_vzdalenost_mnozin(serp1, serp3))
+    try:
+        soubor1 = sys.argv[1]
+        soubor2 = sys.argv[2]
+        csv_data1 = nacti_csv(soubor1)
+        csv_data2 = nacti_csv(soubor2)
+        vysledna_data = spoj_data(csv_data1, csv_data2)
+        zapis_csv(vysledna_data)
+    except Exception:
+        pass
