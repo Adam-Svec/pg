@@ -32,13 +32,13 @@ def print_file_type(file_name):
     elif is_png(header):
         print(f'Soubor {file_name} je PNG.')
     else:
-        print(f'Soubor {file_name} je neznámý.')
+        print(f'Soubor {file_name}  neznámý.')
 
 if __name__ == '__main__':
     try:
         file_name = sys.argv[1]
         print_file_type(file_name)
     except IndexError:
-        print("Chyba: Zadejte název souboru.")
+        print("Chyba: název souboru.")
     except Exception as e:
         print(f"Chyba: {e}")
