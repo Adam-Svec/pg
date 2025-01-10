@@ -54,6 +54,3 @@ Velká Británie|libra|1|GBP|29,745
         except ValueError as e:
             assert str(e) == "Currency XYZ not found in the exchange rate list."
 
-if __name__ == "__main__":
-    test_convert_to_czk()
-    print("Všechny testy proběhly úspěšně.")
